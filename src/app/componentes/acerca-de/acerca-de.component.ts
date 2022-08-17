@@ -12,7 +12,7 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  textacercade ="administrador de base de datos jr (SQL server)";
+  textacercade ="full stack developer jr and data base administrator jr (SQL server)";
   mostrarinput ="none";
   onclick(){
     this.mostrarinput ="block";

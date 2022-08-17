@@ -1,14 +1,15 @@
-
 .mat-card{
   margin: 20px 10px;
   padding: 10px;
 
    border-radius: 32px;
-   border: 2px solid rgb(30, 92, 163);
+   border: 2px solid rgb(105, 105, 105);
    
 }
 .mat-card#first-card{
+  
   padding: 0;
+  bottom: 15px;
 
 }
 div#profile-background{
@@ -25,11 +26,11 @@ div#profile-background img{
 }
 .profile-image{
     border-radius: 50%;
-    width: 152px;
-    height: 152px;
+    width: 180px;
+    height: 180px;
     margin-top: -110px;
     z-index: 1;
-    margin-left: 3px;
+    margin-left: 13px;
     
 }
 
@@ -55,16 +56,15 @@ div#profile-background img{
 
 
 
-#info-actions button{
-  color:rgb(17, 17, 17);
-  background-color: rgb(87, 100, 170);
-  border: 1px solid black;
-  position: relative; top: 180px;
-  right: 313px;
+ #info-actions button{
   
+  position: relative; top: 180px;
 
+  right: 313px;
+  margin-left: 5px;
   
 }
+
 
 .container-fluid li {
   margin: 5px;
@@ -76,11 +76,7 @@ div#profile-background img{
 
  
 
-.btn{
- color: black;
-  border: 1px solid; color: rgb(237, 241, 245);
-  margin-right: 3px;
-}
+
 #logo-netacom {
   width: 140px;
   height: 90px;
@@ -153,8 +149,25 @@ div#profile-background img{
   top: 22px;
 
 }
-.container{ 
+#logoo{
+  width: 180px;
   float: left;
+  height: 60px;
+  margin-left: 10px;
+  position: relative;
+ 
+
+
+
+}
+.container{ 
+  float: center;
   padding-bottom: 40px;
 
 }
+ .btn-del{
+position: relative;
+  top: 22px;
+  right: 12px;
+ }
+
