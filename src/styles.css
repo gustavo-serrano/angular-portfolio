@@ -56,12 +56,12 @@ div#profile-background img{
 
 
 
- #info-actions button{
+ #info-actions{
   
   position: relative; top: 180px;
 
   right: 313px;
-  margin-left: 5px;
+  margin-left: 5px; 
   
 }
 

@@ -16,8 +16,10 @@
             <li class=".btn-sm fa-brands fa-instagram fa-3x " style="color: rgb(27, 27, 27);"></li>
           </a>
           
-          <button type="button" class="btn btn-outline-dark" style="margin-left: 10px;">login</button>
-      
+           <button type="button" class="btn btn-outline-dark" (click)="login()" style="margin-left: 10px;" *ngIf="!isLogged">iniciar Sesión</button>
+           <button type="button" class="btn btn-outline-dark" (click)="onLogOut()" style="margin-left: 10px;" *ngIf="isLogged">Cerrar Sesión</button>
+
+          
         </ul>
 
       </div>
@@ -36,6 +38,7 @@
           <!-- <div id="info-data"> !-->
           <div style="float:left;margin-left: 3px;">
             <h1><b>{{persona.nombre}} {{persona.apellido}}</b></h1>
+            
             <div id="info-company">
               <h5> tecnico en mit informatica s.a.</h5>
             </div>

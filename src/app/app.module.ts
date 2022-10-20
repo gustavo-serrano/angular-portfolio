@@ -7,8 +7,11 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExperEduComponent } from './componentes/exper-edu/exper-edu.component';
 import { IdiomaProyectoComponent } from './componentes/idioma-proyecto/idioma-proyecto.component';
-import { PortfolioService } from './servicios/portfolio.service';
 import{HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';  
+import { interceptorProvider } from './service/interceptorservice';
 
 @NgModule({
   declarations: [
@@ -16,15 +19,18 @@ import{HttpClientModule} from '@angular/common/http';
     EncabezadoComponent,
     AcercaDeComponent,
     ExperEduComponent,
-    IdiomaProyectoComponent
+    IdiomaProyectoComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
