@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-acerca-de',
@@ -16,9 +17,13 @@ export class AcercaDeComponent implements OnInit {
   mostrarinput ="none";
   onclick(){
     this.mostrarinput ="block";
+    
   }
-cambiartextoacercade( valor : string){
-  this.textacercade = valor;
-}
+  cambiartextoacercade( valor : string){
+    this.textacercade = valor;
+    
+    
+  }
+
 
 }

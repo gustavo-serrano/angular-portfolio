@@ -1,122 +1,223 @@
-<div class="card mat-card" id="third-card">
-    <div class="row">
-      <div class="col">
-        <div class="card-titles">
-          <h2><b>experiencia</b></h2>
-        </div>
-      </div>
-  
-  
-    </div>
-  
-    <div>
-      <div>
-        <img id=logo-netacom class="img-fluid" src="./assets/imagenes.vs/logo-netacom.png" alt="netacom">
-      </div>
-      <div>
-  
-        <h4>tecnico(netacom)</h4>
-        <h5><em>al servicio de telecentro</em></h5>
-        <h6><em>2021-2022</em></h6>
-        <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px;color:rgb(0, 0, 0)">
-          <div class="btn-del float-end"><i class="fas fa-times"></i></div>
-            <i class="fa fa-pen"></i>
-  
-        </div>
-  
-      </div>
-    </div>
-    <div>
-      <div>
-        <img id=logo-libercom class="img-fluid" src="./assets/imagenes.vs/libercom.png" alt="libercom">
-      </div>
-      <div>
-        <h4>tecnico(libercom.srl)</h4>
-        <h5><em>al servicio de cablevision-fibertel</em></h5>
-        <h6><em>2021-2022</em></h6>
-        <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px;color:rgb(0, 0, 0)">
-          <div class="btn-del float-end"><i class="fas fa-times"></i></div>
-         
-            <i class="fa fa-pen"></i>
-  
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img id=logo-servicio class="img-fluid" src="./assets/imagenes.vs/servicio-tecnico.png" alt="mitronics">
-      </div>
-      <div>
-        <h4>soporte tecnico(mitronics)</h4>
-        <h5><em>reparaciones de hardware y software</em></h5>
-        <h6><em>2021-2022</em></h6>
-        <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
-          <div class="btn-del float-end"><i class="fas fa-times"></i></div>
-          
-            <i class="fa fa-pen"></i>
-  
-        </div>
-      </div>
-    </div>
-  
+
+<div class="card mat-card" id="quarter-card">
+  <div class="row">
+
+
+
+    <h1><b>Experiencia laboral</b></h1>
+
+
   </div>
-  <!--  educacion-->
-  
-  <div class="card mat-card" id="quarter-card">
-    <div class="row">
-      <div class="col">
-        <div class="card-titles">
-          <h2><b>educacion</b></h2>
-        </div>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-outline-secondary" routerLink="/nuevaexp" *ngIf="isLogged"> + Nueva
+      Experiencia</button>
+  </div>
+
+
+
+
+ 
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+
+
+
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Experiencia of exp">
+          <td>
+            <h2>{{Experiencia.nombreE}}</h2>
+          </td>
+          <td>{{Experiencia.descripcionE}}</td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-secondary" routerLink="/editexp/{{Experiencia.id}}">
+              <i class="fa fa-pen"></i> Editar</button>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-secondary" (click)="delete(Experiencia.id)">
+              <i class="fas fa-times"></i> Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+<div class="card mat-card" id="quarter-card">
+  <div class="row">
+
+    <h1><b>Educacion</b></h1>
+
+
+  </div>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-outline-secondary" routerLink="/nuevaedu" *ngIf="isLogged"> + Nueva
+      Educacion</button>
+  </div>
+
+
+
+
+ 
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+
+
+
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let educacion of educacion">
+          <td>
+            <h2>{{educacion.nombreE}}</h2>
+          </td>
+          <td>{{educacion.descripcionE}}</td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-secondary" routerLink="/editedu/{{educacion.id}}">
+              <i class="fa fa-pen"></i> Editar</button>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-secondary" (click)="delette(educacion.id)">
+              <i class="fas fa-times"></i> Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--  educacion codigo anterior (2)
+
+<div class="card mat-card" id="quarter-card">
+<div class="row">
+  <div class="col">
+    <div class="card-titles">
+      <h2><b>educacion</b></h2>
+    </div>
+  </div>
+
+
+</div>
+<div>
+  <div>
+    <img id=logo-it class="img-fluid" src="./assets/imagenes.vs/educacion-it.png" alt="educacion-it">
+  </div>
+  <div>
+    <h4>educacion it</h4>
+    <h5><em>carrera de SQL y azure</em></h5>
+    <h6><em>2021-2022</em></h6>
+    <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
+      <div class="btn-del float-end"><i class="fas fa-times"></i></div>
+      <i class="fa fa-pen"></i>
+
+    </div>
+  </div>
+</div>
+<div>
+  <div>
+    <img id=logo-sql class="img-fluid" src="./assets/imagenes.vs/logo-sql.png" alt="la escuela del sql">
+  </div>
+  <div>
+    <h4>la escuela del SQL</h4>
+    <h5><em>basico-intermedio-avanzado</em></h5>
+    <h6><em>2021-2022</em></h6>
+    <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
+      <div class="btn-del float-end"><i class="fas fa-times"></i></div>
+
+      <i class="fa fa-pen"></i>
+
+    </div>
+  </div>
+</div>
+<div>
+  <div>
+    <img id=logo-utn class="img-fluid" src="https://12ntes.com.ar/wp-content/uploads/Logo-UTN-1024x576-1.png" alt="utn">
+  </div>
+  <div>
+    <h4>UTN</h4>
+    <h5><em>introduccion a la programacion</em></h5>
+    <h6><em>2021-2022</em></h6>
+    <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
+      <div class="btn-del float-end"><i class="fas fa-times"></i></div>
+      <i class="fa fa-pen"></i>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+-->
+<!-- anterior codigo
+<div class="card mat-card" id="third-card">
+  <div class="row">
+    <div class="col">
+      <div class="card-titles">
+        <h2><b>experiencia</b></h2>
       </div>
-  
-  
+    </div>
+
+
+  </div>
+
+  <div>
+    <div>
+      <img id=logo-netacom class="img-fluid" src="./assets/imagenes.vs/logo-netacom.png" alt="netacom">
     </div>
     <div>
-      <div>
-        <img id=logo-it class="img-fluid" src="./assets/imagenes.vs/educacion-it.png" alt="educacion-it">
-      </div>
-      <div>
-        <h4>educacion it</h4>
-        <h5><em>carrera de SQL y azure</em></h5>
-        <h6><em>2021-2022</em></h6>
-        <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
-          <div class="btn-del float-end"><i class="fas fa-times"></i></div>
-          <i class="fa fa-pen"></i>
-  
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img id=logo-sql class="img-fluid" src="./assets/imagenes.vs/logo-sql.png" alt="la escuela del sql">
-      </div>
-      <div>
-        <h4>la escuela del SQL</h4>
-        <h5><em>basico-intermedio-avanzado</em></h5>
-        <h6><em>2021-2022</em></h6>
-        <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
-          <div class="btn-del float-end"><i class="fas fa-times"></i></div>
-        
+
+      <h4>tecnico(netacom)</h4>
+      <h5><em>al servicio de telecentro</em></h5>
+      <h6><em>2021-2022</em></h6>
+      <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px;color:rgb(0, 0, 0)">
+        <div class="btn-del float-end"><i class="fas fa-times"></i></div>
         <i class="fa fa-pen"></i>
-  
+
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <div>
+      <img id=logo-libercom class="img-fluid" src="./assets/imagenes.vs/libercom.png" alt="libercom">
+    </div>
+    <div>
+      <h4>tecnico(libercom.srl)</h4>
+      <h5><em>al servicio de cablevision-fibertel</em></h5>
+      <h6><em>2021-2022</em></h6>
+      <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px;color:rgb(0, 0, 0)">
+        <div class="btn-del float-end"><i class="fas fa-times"></i></div>
+
+        <i class="fa fa-pen"></i>
+
       </div>
     </div>
   </div>
   <div>
     <div>
-      <img id=logo-utn class="img-fluid" src="https://12ntes.com.ar/wp-content/uploads/Logo-UTN-1024x576-1.png" alt="utn">
+      <img id=logo-servicio class="img-fluid" src="./assets/imagenes.vs/servicio-tecnico.png" alt="mitronics">
     </div>
     <div>
-      <h4>UTN</h4>
-      <h5><em>introduccion a la programacion</em></h5>
+      <h4>soporte tecnico(mitronics)</h4>
+      <h5><em>reparaciones de hardware y software</em></h5>
       <h6><em>2021-2022</em></h6>
       <div class="btn-edit" style="float: right;position: relative; bottom: 120px; right:20px; color:rgb(0, 0, 0)">
         <div class="btn-del float-end"><i class="fas fa-times"></i></div>
+
         <i class="fa fa-pen"></i>
-        <!--link de certificados-->
-  
+
       </div>
     </div>
   </div>
-  </div>
+
+</div>
+-->
